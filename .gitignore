@@ -1,0 +1,9 @@
+# Nothing from a client is kept here
+*.eml
+*.msg
+*.pdf
+*.pptx
+*.docx
+*.xlsx
+meeting/
+transfer/
