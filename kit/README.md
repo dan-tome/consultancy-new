@@ -8,11 +8,15 @@ system or person, and nothing from work is added to it.
 | Path | What it is |
 | --- | --- |
 | `copilot/instructions/consultancy-kit.instructions.md` | Always-on note telling Copilot the kit exists, when to use it, and that company rules come first. |
-| `copilot/skills/kit-ask-consultant` | Turns a work question into generic text to send to the consultant by web clipboard. |
+| `copilot/skills/kit-ask-consultant` | Turns a work question into generic text, shows it to the user, and sends it to NINETTE once they say yes. |
 | `copilot/skills/kit-code-review` | Review a diff for correctness, security, performance and tests. |
 | `copilot/skills/kit-debugging` | Find the root cause before fixing. |
 | `copilot/skills/kit-pr-description` | Write a PR title and description. |
 | `copilot/skills/kit-decision-record` | Write an ADR. |
+| `copilot/skills/kit-test-design` | Choose tests by likelihood and impact of failure. |
+| `copilot/skills/kit-evidence` | Mark each claim as observed, inferred or unverified. |
+| `copilot/skills/kit-change-plan` | Plan risky changes as small steps, each with a check and a way back. |
+| `copilot/skills/kit-requirements-challenge` | Question a request before building it: goal, gaps, conflicts. |
 | `Install-Copilot.ps1` | Links the above into `~/.copilot`, writes the working folder's `AGENTS.md` block, and turns off pushing from the clone. |
 | `COPILOT-SETUP.md` | Step-by-step setup instructions for Copilot to follow. |
 
