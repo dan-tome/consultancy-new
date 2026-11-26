@@ -56,11 +56,18 @@ involves the clone, the kit, the web clipboard or the consultant. In short:
 user), run ``git -C "$repo" pull --ff-only``, then ``& "$repo\kit\Install-Copilot.ps1" -Folder "$Dir"``,
 and report what changed.
 
-"ninette" (or "the consultant has replied"): follow the ``kit-read-reply`` skill
-(``$repo\kit\copilot\skills\kit-read-reply\SKILL.md``). It reads the reply with
-``& "$repo\tools\clip\Get-Clip.ps1"``. If the first line isn't ``Reply from the consultant.``, it puts the
-text back unchanged and stops. If it is a reply, it summarises it and asks the user before doing any of its
-steps. To ask the consultant something, use the ``kit-ask-consultant`` skill.
+Trigger phrases (skills are in ``$repo\kit\copilot\skills``):
+
+- "ninette" (or "the consultant has replied"): ``kit-read-reply``. It reads NINETTE with
+  ``& "$repo\tools\clip\Get-Clip.ps1"``. If the first line isn't ``Reply from the consultant.``, it puts the
+  text back unchanged and stops. Otherwise it summarises the reply, shows any "Prompt from the user:"
+  section word for word, and runs it as the user's instruction only after the user says yes.
+- "ask the consultant": ``kit-ask-consultant``.
+- "report that", or when the user corrects you or a task went wrong: ``kit-report-limitation``.
+- "kit review": ``kit-review``.
+
+Your known limitations, and what to do instead, are listed in the rules file above. Check yourself
+against them.
 $endMark
 "@
   $new = if ($rest) { "$rest`n`n$block`n" } else { "$block`n" }

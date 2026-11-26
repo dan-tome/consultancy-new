@@ -9,7 +9,9 @@ system or person, and nothing from work is added to it.
 | --- | --- |
 | `copilot/instructions/consultancy-kit.instructions.md` | Always-on note telling Copilot the kit exists, when to use it, and that company rules come first. |
 | `copilot/skills/kit-ask-consultant` | Turns a work question into generic text, shows it to the user, and sends it to NINETTE once they say yes. |
-| `copilot/skills/kit-read-reply` | Trigger word "ninette": reads the consultant's reply from NINETTE, puts back anything that isn't a reply, and asks before acting. |
+| `copilot/skills/kit-read-reply` | Trigger word "ninette": reads the consultant's reply, puts back anything that isn't a reply, and runs its "Prompt from the user:" once the user confirms. |
+| `copilot/skills/kit-report-limitation` | "report that" or when corrected: sends a generic report of what went wrong, so the kit can be fixed. |
+| `copilot/skills/kit-review` | "kit review": sends a generic summary of what in the kit helped, confused or is missing. |
 | `copilot/skills/kit-code-review` | Review a diff for correctness, security, performance and tests. |
 | `copilot/skills/kit-debugging` | Find the root cause before fixing. |
 | `copilot/skills/kit-pr-description` | Write a PR title and description. |
@@ -51,6 +53,14 @@ junctions, so a pull alone updates existing skills. `Install-Copilot.ps1 -Uninst
 removes the links and the block, and leaves everything else alone.
 
 Check first that company policy allows personal Copilot skills and instructions on the machine.
+
+## How the kit improves
+
+Copilot sends `Limitation report:`, `Kit review:`, `Request:` and `Result:` messages to NINETTE (after the
+user says yes). The consultant fixes the kit, preferring a script to more wording where Copilot keeps
+misjudging, adds the limitation and its workaround to "Your known limitations" in the instruction file,
+tests the fix, and pushes. The reply starts `Reply from the consultant.` and carries a
+`Prompt from the user:`, usually "update the kit", which Copilot runs once the user confirms it.
 
 ## Adding to the kit (on the consultancy machine only)
 
