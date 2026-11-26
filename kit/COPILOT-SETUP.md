@@ -31,6 +31,9 @@ pushing from the clone. Warnings that a folder was skipped mean something with t
 - `Get-ChildItem "$HOME\.copilot\skills" -Filter 'kit-*'` lists the kit skills.
 - `<working folder>\AGENTS.md` contains the block between `consultancy-kit:start` and `consultancy-kit:end`.
 - `git -C "<clone>" remote -v` shows `no-push` for push.
+- `git -C "<clone>" status --porcelain` prints nothing.
+- Read `<clone>\kit\copilot\instructions\consultancy-kit.instructions.md`, which holds the rules for the
+  repo. In your report, summarise them for the user in a few lines so they can confirm you've understood.
 
 ## 4. Report
 
@@ -41,6 +44,8 @@ a reload may be needed). From then on:
 - "ask the consultant" uses the `kit-ask-consultant` skill.
 
 ## Rules while doing this
+
+The full rules are in `kit/copilot/instructions/consultancy-kit.instructions.md`. During setup in particular:
 
 - Never edit, commit to or push from the clone. Never copy anything from the working folder or the machine
   into it.

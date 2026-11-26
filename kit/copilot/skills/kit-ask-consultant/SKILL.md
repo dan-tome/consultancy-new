@@ -32,8 +32,8 @@ that keeps the technical problem and drops everything that identifies the compan
    Question: <the specific question>
    ```
 
-5. Tell the user to open `https://clipboardify.com/#<code>` in a browser (the code they agreed with the
-   consultant), paste the text and save. Don't send it yourself.
+5. Tell the user to open `https://clipboardify.com/#NINETTE` in a browser, paste the text and save. Don't send
+   it yourself.
 
 When an answer comes back, treat it as advice: check it against the real code and company rules before
 using it, and say where it doesn't fit.
