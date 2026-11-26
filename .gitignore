@@ -7,3 +7,6 @@
 *.xlsx
 meeting/
 transfer/
+
+# Local agent settings stay local
+.claude/settings.local.json
