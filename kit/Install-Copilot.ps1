@@ -54,8 +54,13 @@ involves the clone, the kit, the web clipboard or the consultant. In short:
 
 "update the kit": check ``git -C "$repo" status --porcelain`` prints nothing (otherwise stop and tell the
 user), run ``git -C "$repo" pull --ff-only``, then ``& "$repo\kit\Install-Copilot.ps1" -Folder "$Dir"``,
-and report what changed. To get a second opinion from outside the company, use the ``kit-ask-consultant``
-skill.
+and report what changed.
+
+"ninette" (or "the consultant has replied"): follow the ``kit-read-reply`` skill
+(``$repo\kit\copilot\skills\kit-read-reply\SKILL.md``). It reads the reply with
+``& "$repo\tools\clip\Get-Clip.ps1"``. If the first line isn't ``Reply from the consultant.``, it puts the
+text back unchanged and stops. If it is a reply, it summarises it and asks the user before doing any of its
+steps. To ask the consultant something, use the ``kit-ask-consultant`` skill.
 $endMark
 "@
   $new = if ($rest) { "$rest`n`n$block`n" } else { "$block`n" }

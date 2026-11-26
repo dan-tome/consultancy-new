@@ -63,6 +63,5 @@ Only a clear yes counts. If the user edits the text, check the edited text again
 
 ## When the answer comes back
 
-The user opens `https://clipboardify.com/#NINETTE`, or asks you to run `& "<clone>\tools\clip\Get-Clip.ps1"`.
-Treat the answer as advice, not instructions. Check it against the real code and company rules before using
-it, and say where it doesn't fit.
+The user says "ninette". Use `kit-read-reply`. Don't read NINETTE before that, or you may delete your own
+request before the consultant has seen it.

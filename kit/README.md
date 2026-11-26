@@ -9,6 +9,7 @@ system or person, and nothing from work is added to it.
 | --- | --- |
 | `copilot/instructions/consultancy-kit.instructions.md` | Always-on note telling Copilot the kit exists, when to use it, and that company rules come first. |
 | `copilot/skills/kit-ask-consultant` | Turns a work question into generic text, shows it to the user, and sends it to NINETTE once they say yes. |
+| `copilot/skills/kit-read-reply` | Trigger word "ninette": reads the consultant's reply from NINETTE, puts back anything that isn't a reply, and asks before acting. |
 | `copilot/skills/kit-code-review` | Review a diff for correctness, security, performance and tests. |
 | `copilot/skills/kit-debugging` | Find the root cause before fixing. |
 | `copilot/skills/kit-pr-description` | Write a PR title and description. |

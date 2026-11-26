@@ -41,8 +41,8 @@ block with the clone's path and how to update it.
   `kit-change-plan`, `kit-requirements-challenge`.
 - Use `kit-ask-consultant` when the user wants a second opinion from outside the company or says "ask the
   consultant". It writes the generic question, shows it to the user, and sends it once they say yes.
-- To read the consultant's answer, the user can open `https://clipboardify.com/#NINETTE`. Or, if they ask, run
-  `& "<clone>\tools\clip\Get-Clip.ps1"`, which prints the text and saves a local copy, since reading deletes
-  it. Apply rule 4 to what comes back.
+- When the user says "ninette", or that the consultant has replied, use `kit-read-reply`. It reads NINETTE,
+  puts back anything that isn't a reply, and asks before carrying out any steps. Apply rule 4 to what comes
+  back.
 - "update the kit" means: check the clone is clean (rule 6), `git -C <clone> pull --ff-only`, then
   `& "<clone>\kit\Install-Copilot.ps1" -Folder "<working folder>"`, and report what changed.
