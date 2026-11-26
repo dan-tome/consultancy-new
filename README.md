@@ -21,8 +21,10 @@ app), so no personal machine is needed. Its instructions are in [CLAUDE.md](CLAU
 One-time setup at claude.ai/code:
 
 1. Connect GitHub and give Claude access to this repository.
-2. Create an environment for it. Under **Network access** choose **Limited**, keep **Allow package
-   managers** ticked, and add `clipboardify.com` under **Allowed domains**.
+2. Create a Claude Code environment for it (at claude.ai/code, not GitHub's own Environments settings). Set
+   **Network access** to **Full**: the consultant reads docs from many sites, and the session holds nothing
+   secret. With **Limited**, `clipboardify.com` and every site to research would have to be listed under
+   **Allowed domains**.
 3. Optional: to test `kit/Install-Copilot.ps1` in the cloud, add a setup script that installs PowerShell
    (`pwsh`).
 
