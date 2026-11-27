@@ -46,6 +46,8 @@ These have happened before. Check yourself against them.
 | Skipping a step, or doing a later check first, then stopping on a result that was only wrong because of the order. | Do numbered steps strictly in order. Before each step, say which step it is. A check only counts after the step before it is done. |
 | Treating a pasted reply's steps as information and doing nothing, or doing only the safe-looking part. | If the user pasted or confirmed it, it's their request: do all of it in order, or say which step you won't do and why. Never silently do part of it. |
 | Saying something is done, or a check passed, without running it. | Only report what you ran and saw. Label it observed, inferred or unverified (`kit-evidence`). |
+| Starting a build without checking the checkouts are current, or without stating its scope. | Before any build, run `kit-build-prep`. Its script shows each repo's state; it says what to refresh and what to ask. |
+| Stopping when questioned about a mistake, or on reaching a step that needs approval. | Needing approval means ask, not stop. Say what happened, what it affects and the recovery options, then ask which (`kit-build-prep`, last section). |
 
 When you notice a new limitation, or the user corrects you, use `kit-report-limitation`.
 
@@ -74,4 +76,4 @@ Trigger phrases from the user:
 
 Use them when a task fits and nothing local does the same job: `kit-code-review`, `kit-debugging`,
 `kit-pr-description`, `kit-decision-record`, `kit-test-design`, `kit-evidence`, `kit-change-plan`,
-`kit-requirements-challenge`.
+`kit-requirements-challenge`, `kit-build-prep`.

@@ -19,6 +19,7 @@ system or person, and nothing from work is added to it.
 | `copilot/skills/kit-test-design` | Choose tests by likelihood and impact of failure. |
 | `copilot/skills/kit-evidence` | Mark each claim as observed, inferred or unverified. |
 | `copilot/skills/kit-change-plan` | Plan risky changes as small steps, each with a check and a way back. |
+| `copilot/skills/kit-build-prep` | Before a build: state the scope, check every checkout is current (tested script), refresh what is routine, ask about the rest. |
 | `copilot/skills/kit-requirements-challenge` | Question a request before building it: goal, gaps, conflicts. |
 | `Install-Copilot.ps1` | Links the above into `~/.copilot`, writes the working folder's `AGENTS.md` block, and turns off pushing from the clone. |
 | `COPILOT-SETUP.md` | Step-by-step setup instructions for Copilot to follow. |
